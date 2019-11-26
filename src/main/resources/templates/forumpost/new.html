@@ -7,27 +7,25 @@
 	</head>
 	
 	<body>
+		<div class="container">
+			<h1>Create a New Post</h1>
+	 		<form action="#" th:action="@{/forum_posts/new}" th:object="${forumPost}" method="post">
+	 		
+	 		<div class="form-group">
+	 			<input type="text" class="form-control" placeholder="Title..." th:field="*{title}" />
+	 		</div>
+	 		
+	 		<div class="form-group">
+	 			<input type="text" class="form-control" placeholder="Your Name Here..." th:field="*{author}" />
+	 		</div>
+	 		
+	 		<div class="form-group">
+	 			<input type="text" class ="form-control" placeholder="Your Entry" th:field="*{forumEntry}" />
+	 		</div>
 	
-		<p>Please use the form below to submit a Post:</p>
-		<form action="#" th:action="@{/}" th:object="${forumPost}" method="post">
-			<table>
-				<tr>
-			        <td>Title:</td>
-				    <td><input type="text" th:field="*{title}" /></td>
-				</tr>
-				<tr>
-				    <td>Author:</td>
-				    <td><input type="text" th:field="*{author}" /></td>
-				</tr>
-				<tr>
-			    	<td>Entry:</td>
-				    <td><input type="text" th:field="*{forumEntry}" /></td>
-				</tr>
-				<tr>
-				    <td><button type="submit">Submit Your Post</button></td>
-				</tr>
-			</table>
+	 		<button class="btn btn-primary">Submit Your Post</button>
 		</form>
+		</div>
 	
 		<script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
