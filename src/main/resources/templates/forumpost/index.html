@@ -31,27 +31,6 @@
 			    </div>
 			</div>
 			
-			<p>Please use the form below to submit a Post:</p>
-			<form action="#" th:action="@{/}" th:object="${forumPost}" method="post">
-			    <table>
-				<tr>
-			        <td>Title</td>
-				    <td><input type="text" th:field="*{title}" /></td>
-				</tr>
-				<tr>
-				    <td>Author:</td>
-				    <td><input type="text" th:field="*{author}" /></td>
-				</tr>
-				<tr>
-			    	<td>Entry:</td>
-				    <td><input type="text" th:field="*{forumEntry}" /></td>
-				</tr>
-				<tr>
-				    <td><button type="submit">Submit Your Post</button></td>
-				</tr>
-			    </table>
-			</form>
-			
 			<script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 			<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 		</div>
