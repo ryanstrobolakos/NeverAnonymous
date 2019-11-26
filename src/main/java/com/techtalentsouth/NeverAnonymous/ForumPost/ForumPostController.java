@@ -26,7 +26,7 @@ public class ForumPostController {
 		model.addAttribute("title", forumPost.getTitle());
 		model.addAttribute("author", forumPost.getAuthor());
 		model.addAttribute("forumEntry", forumPost.getForumEntry());
-		return "blogpost/result";
+		return "forumpost/result";
 	}
 	
 }
