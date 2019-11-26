@@ -24,7 +24,12 @@ public class ForumPostController {
 	
 	private ForumPost forumPost;
 	
-	@PostMapping(value="/")
+	@GetMapping(value="/forum_posts/new")
+	public String newPost(ForumPost forumPost) {
+		return "forumpost/new";
+	}
+	
+	@PostMapping(value="/forum_posts/new")
 	public String create(ForumPost forumPost, Model model) {
 		forumPostRepository.save(new ForumPost(forumPost.getTitle(), forumPost.getAuthor(), 
 		forumPost.getForumEntry()));
