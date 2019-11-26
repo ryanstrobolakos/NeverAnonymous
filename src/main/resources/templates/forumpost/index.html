@@ -9,6 +9,28 @@
 	<body>
 		<div class = "container">
 			<h1>Welcome to Never Anonymous</h1>
+			<h3>Check out our posts:</h3>
+			<div class="row">
+			    <div th:each="forum:${posts}">
+			        <div class="col-md-6">
+			            <div class="panel panel-default">
+			                <div class="panel-heading">
+			                    <p th:text="${forum.title}"/>
+							</div>
+						    <div class="panel-body">
+								<p th:text="${forum.author}"/>
+								<p th:text="${forum.forumEntry}" />
+						    </div>
+						    <div class="panel-footer">
+							<!-- Link to Update -->
+							<!-- Link to Show  -->
+							<!--  Link to Destroy -->
+					        </div>
+			          </div>
+			        </div>
+			    </div>
+			</div>
+			
 			<p>Please use the form below to submit a Post:</p>
 			<form action="#" th:action="@{/}" th:object="${forumPost}" method="post">
 			    <table>
